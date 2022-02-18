@@ -21,7 +21,7 @@ const App = () => {
                 </div>
             </main>
             <footer>
-                <a href="#"><h4>The Game Vault</h4></a>
+                <a href="./App.js"><h4>The Game Vault</h4></a>
                 <hr />
                 <p>A boardgame selection app, built with React and Redux, by Ed Hampton.  Copyright 2022.</p>
             </footer>
