@@ -1,44 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# The Game Vault
 
-## Available Scripts
+A simple app created to aid in board game selection based on certain circumstances controlled by filters.
 
-In the project directory, you can run:
+1. About
+2. Technology used
+3. Future
 
-### `npm start`
+## 1.  About
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The Game Vault app is a project I built to further my own understanding of React and Redux, and to grow more comfortable using these powerful tools.  It allows a user to view a list of all of my games, to filter this list in various ways, and to add a new game to the list.  Its usage is straightforward, and (hopefully) self explanatory.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## 2. Technology used
 
-### `npm test`
+This was written in VSCode, using HTML, CSS, and JavaScript, working with React and Redux.  It has allowed me to become more familiar with managing state across a slightly more complex app than I've made up to now, making use of different slices of state to configure the redux store.  It's also seen me use a few little simple features like drop-down menus and css pseudo-classes for links that I've not made use of before.  All in all, I've learnt a lot whilst creating this, and feel better equipped to push forwards with my Codecademy course.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3. Future
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+There are a few features to add to this app in the future, as I find the time.  
+The ability to delete games from the list should be implemented.
+An additional filter option of a minimum game time, would help to narrow the list down more.
+A button to recommend a random game from the rendered list as an alert would be a nice little touch.
+Buttons that show or hide the addGameForm and the filtersForm would help tidy the app up a little.
