@@ -1,0 +1,215 @@
+/* Ed's Game Vault - External Stylesheet */
+/* border-box style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: rgb(33, 31, 37);
+  padding: 0; 
+}
+
+
+/* Font */
+@font-face {
+  font-family: 'Oldenburg';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oldenburg/v18/fC1jPY5JYWzbywv7c4VKVkSp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v14/wlptgwvFAVdoq2_F94zlCfv0bz1WC2UWzLdneg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* Styling for the Header and other headings*/
+header {
+  color: goldenrod;
+  text-shadow: 0.2rem 0.2rem rgba(255, 255, 255, 0.3);
+  width: 100%;
+  margin: 0.5rem;
+  padding: 1rem;  
+  text-align: center;  
+}
+
+h1 {
+  font-family: "Oldenburg", sans-serif;
+  font-size: 3.5rem;
+  text-decoration: overline underline;  
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Lexend", sans-serif;
+}
+
+
+/* Making Add Game and Filter sit side by side */
+.bothForms {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Styling for the Filter Options Section */
+.filters {
+  max-width: 46%;
+  border: solid 0.25rem goldenrod;
+  border-radius: 1rem;
+  background-color: antiquewhite;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.filterOptions {
+  display: flex; 
+  justify-content: space-around; 
+}
+
+.filterOptions div {
+  margin: 1rem;  
+}
+
+.filterOptions div label {
+  font-weight: bold;
+}
+
+.filters p {
+  font-size: 0.8rem;
+}
+
+/* Styling for the Add Game Section */
+
+.addGameFormContainer {
+  max-width: 46%;
+  border: solid 0.25rem goldenrod;
+  border-radius: 1rem;
+  background-color: antiquewhite;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.addGameFormContainer label {
+  font-weight: bold;  
+}
+
+.addGameFormContainer aside {
+  font-size: 0.8rem;
+}
+
+.addGameFormContainer input {
+  margin: 8px;
+  padding: 1px;
+}
+
+.addGameFormContainer button {
+  margin-left: 50px;
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 3px;
+}
+
+.addGameFormContainer button:hover {
+  cursor: pointer;
+}
+
+.addGameFormContainer button:active {
+  margin-top: 3px;
+  margin-left: 52px;
+  box-shadow: 0px 0px;
+}
+
+/* Styling for the List Section */
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  max-width: 94%;
+  text-align: center;
+  background-color: antiquewhite;
+  border: solid 0.4rem goldenrod;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Styling for List Tiles */
+
+.listTile {  
+  background-color: whitesmoke;
+  border: solid 5px black;
+  border-style: double;
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;  
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.listTile h3{
+  text-align: center;
+  text-shadow: 1px 2px goldenrod;  
+}
+
+/* Styling for the Footer */
+
+footer {
+  background-color: antiquewhite;
+  border-top: solid 3px goldenrod;
+  border-bottom: solid 3px goldenrod;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+footer a:link {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: goldenrod;
+  text-decoration: underline;
+}
+
+footer a:active {
+  color: red;
+  text-decoration: underline;
+}
+
+footer h4 {
+  padding-bottom: 10px;
+}
+
+footer p {
+  padding-top: 10px;
+}
