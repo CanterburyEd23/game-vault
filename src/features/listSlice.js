@@ -5,7 +5,7 @@ export const listSlice = createSlice({
     initialState: [
         { name: "Scrabble", players: [2, 3, 4], time: 50, type: "V", id: 1001 },
         { name: "Ticket to Ride", players: [2, 3, 4, 5], time: 75, type: "V", id: 1002 },
-        { name: "Exploding Kittens", players: [3], time: 10, type: "V", id: 1003 },
+        { name: "Exploding Kittens", players: [3, 4, 5, 6], time: 10, type: "V", id: 1003 },
         { name: "Pandemic", players: [2, 3, 4], time: 45, type: "C", id: 1004 },
         { name: "Nefarious", players: [2, 3, 4, 5, 6], time: 30, type: "V", id: 1005 },
         { name: "Firefly", players: [3, 4, 5], time: 150, type: "V", id: 1006 },
@@ -51,8 +51,16 @@ export const listSlice = createSlice({
             };
             state.push(newGame);
         },
+        deleteGame: (state, action) => {
+            for (let i = 0; i < state.length; i++) {
+                if ( state.id === action.payload.key) {
+                    state.splice(i, 1);
+                    break;
+                };
+            };
+        },
     },
 });
 
-export const { addGame } = listSlice.actions;
+export const { addGame, deleteGame } = listSlice.actions;
 export default listSlice.reducer;
