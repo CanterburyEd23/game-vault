@@ -3,13 +3,21 @@ import { useDispatch } from "react-redux";
 import { deleteGame } from "./listSlice";
 
 const ListTile = ({name, players, time, type, key}) => {
+    // code to calculate how to display number of players, based on the array in listSlice
     const playersStart = players[0];
     const playersEnd = players.length -1;
-    const people = `${playersStart} - ${players[playersEnd]} player`;
+    let people;
+    if (playersStart === players[playersEnd]) {
+        people = `${playersStart} player`;
+    } else {
+        people = `${playersStart} - ${players[playersEnd]} players`;
+    };
+    
+    //Calculating the type of game, C or V
     const gameType = type === "C" ? "Co-op" : "Versus";
 
+    //Handling a user pressing the delete game button on a tile
     const dispatch = useDispatch();
-
     const handleDeleteClick = () => {
         dispatch(
             deleteGame({ key })
