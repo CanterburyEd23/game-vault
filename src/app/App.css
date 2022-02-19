@@ -237,3 +237,58 @@ footer h4 {
 footer p {
   padding-top: 10px;
 }
+
+@media only screen and (max-width: 1024px) {
+  .filterOptions {
+    flex-direction: column;
+  }
+  
+  .list {
+    padding: 0.5rem;
+    margin: 0.3rem;
+  }
+  .listTile {
+    padding: 0.3rem;
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .filters {
+    padding: 0.3rem;
+    margin: 0.2rem;
+  }
+  .filterOptions div {
+    padding: 0.3rem;
+    margin: 0.2rem;
+  }
+  .addGameFormContainer {
+    padding: 0.3rem;
+    margin: 0.2rem;
+  }
+  .list {
+    padding: 0.3rem;
+    margin: 0.2rem;
+  }
+  .listTile {
+    margin: 0.2rem;
+    width: 185px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .bothForms {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters, .addGameFormContainer {
+    max-width: 98%;
+    text-align: center;
+  }
+  .list {
+    max-width: 98%;
+  }
+  .listTile {
+    width: 166px;
+  }
+}
