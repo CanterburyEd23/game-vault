@@ -45,7 +45,7 @@ const List = () => {
                         players={game.players}
                         time={game.time}
                         type={game.type}
-                        key={game.id}
+                        id={game.id}
                     />
                 ))}
             </ul>

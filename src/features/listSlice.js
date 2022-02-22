@@ -53,9 +53,8 @@ export const listSlice = createSlice({
         },
         deleteGame: (state, action) => {
             for (let i = 0; i < state.length; i++) {
-                if ( state.id === action.payload.key) {
-                    state.splice(i, 1);
-                    break;
+                if ( state[i].id === action.payload.id) {
+                    state.splice(i, 1);                            
                 };
             };
         },

@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteGame } from "./listSlice";
 
-const ListTile = ({name, players, time, type, key}) => {
+const ListTile = ({name, players, time, type, id}) => {
     // code to calculate how to display number of players, based on the array in listSlice
     const playersStart = players[0];
     const playersEnd = players.length -1;
@@ -20,7 +20,7 @@ const ListTile = ({name, players, time, type, key}) => {
     const dispatch = useDispatch();
     const handleDeleteClick = () => {
         dispatch(
-            deleteGame({ key })
+            deleteGame({ id })
         );
     };
 
