@@ -6,13 +6,18 @@ import { v4 as uuidv4 } from "uuid";
 const AddGameForm = () => {
     const dispatch = useDispatch();
     const [name, setName] = useState("");
+    const [minPlayers, setMinPlayers] = useState("");
+    const [maxPlayers, setMaxPlayers] = useState("");
     const [players, setPlayers] = useState([]);
     const [time, setTime] = useState("");
     const [type, setType] = useState("");
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        setPlayers(players.split(""));
+        for (let i = minPlayers; i <= maxPlayers; i++) {
+            let payload = parseInt(i)
+            setPlayers(players.push(payload));
+        };
         dispatch(
             addGame({
                 name: name,
@@ -23,9 +28,37 @@ const AddGameForm = () => {
             })
         );
         setName("");
-        setPlayers("");
+        setMinPlayers("");
+        setMaxPlayers("");
+        setPlayers([]);
         setTime("");
         setType("");        
+    };
+
+    const handleMinPlayerInput = (event) => {
+        if (event.target.value > 0 || event.target.value === "") {
+            setMinPlayers(event.target.value);
+        } else {
+            alert("Please enter a whole number greater than 0!");
+            setMinPlayers("");
+        };
+        if (maxPlayers !== "" && event.target.value > maxPlayers) {
+            alert("Players (min) must be equal to or less than Players (max)!");
+            setMinPlayers("");
+        };
+    };
+
+    const handleMaxPlayerInput = (event) => {
+        if (event.target.value > 0 || event.target.value === "") {
+            setMaxPlayers(event.target.value);
+        } else {
+            alert("Please enter a whole number greater than 0!");
+            setMaxPlayers("");
+        };
+        if (minPlayers !== "" && minPlayers > event.target.value) {
+            alert("Players (min) must be equal to or less than Players (max)!");
+            setMaxPlayers("");
+        };
     };
    
     return (
@@ -40,15 +73,23 @@ const AddGameForm = () => {
                     onChange={(event) => setName(event.target.value)}
                 ></input>
                 <br />
-                <label> No. of Players: </label>
+                <label> Players (min): </label>
                 <input
                     type="text"
-                    placeholder="Example: 2345"
-                    value={players}
-                    onChange={(event) => setPlayers(event.target.value)}
+                    placeholder="minimum required players"
+                    value={minPlayers}
+                    onChange={handleMinPlayerInput}
                 ></input>
-                <aside>(please enter every possible number of players between 1 and 9, with no spaces.)</aside>
-                <label>Average game length (in minutes): </label>
+                <br />
+                <label> Players (max): </label>               
+                <input
+                    type="text"
+                    placeholder="maximum possible players"
+                    value={maxPlayers}
+                    onChange={handleMaxPlayerInput}
+                ></input>
+                <br />             
+                <label>Average game time (in minutes): </label>
                 <input
                     type="number"
                     placeholder="Game length in mins"
